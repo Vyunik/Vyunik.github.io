@@ -1,0 +1,303 @@
+include mixins.pug
+
+- var src = 'img/'
+- var projects__item = [ {headline: 'Project Title', description: 'GRAPHIC DESIGN'}, {headline: 'Project Title', description: 'GRAPHIC DESIGN'}, {headline: 'Project Title', description: 'GRAPHIC DESIGN'}, {headline: 'Project Title', description: 'GRAPHIC DESIGN'}]
+
+header.header
+    .container
+        .row
+            .col-lg-3.col-md-3.col-sm-12.col-12
+                .logo.d-flex
+                    img.header__logo(src = src + 'logo.png' title='Логотип' alt='Логотип')
+                    h4.header__headline MARINE
+            .col-lg-3.ml-auto.col-md-3.col-sm-6.col-6
+                .header_connection.d-flex
+                    .header__phone CALL US: +1 800 450 17 04
+                    .header__line
+            .col-lg-3.col-md-3.col-sm-6.col-6
+                .header__social.d-flex
+                    +social('fb', 'tw', 'sk', 'goo', 'vi', 'inn', 'inst')
+
+section.navigation
+    .container
+        .row
+            .col-lg-6.col-md-10.col-sm-10.col-10
+                nav.navigation__menu
+                    ul.nav
+                        +nav('#','HOME',true)
+                        +nav('#','BLOG',false)
+                        +nav('#','GALLERY',false)
+                        +nav('#','PAGES',false)
+                        +nav('#','CONTACTS',false)
+            .col-lg-1.ml-auto.col-md-1.col-sm-1.col-2
+                .navigation__search.m-auto
+                    .navigation__search-btn.m-auto
+                    form.navigation__search-block
+                        input(type='search' placeholder='Search ...').navigation__search-block-input
+                        input(type='submit' value).navigation__search-block-btn
+
+section.power
+    .container-fluid.p-0
+        #carouselIndicators.carousel.slide(data-wrap='true')
+            .carousel-inner
+                .carousel-item.active
+                    img.d-block.w-100(src=src+'1600x810.png')
+                .carousel-item
+                    img.d-block.w-100(src=src+'1600x810-darker.png')
+                .carousel-item
+                    img.d-block.w-100(src=src+'1600x810-lighter.png')
+            a.carousel-control-prev(href='#carouselIndicators' role='button' data-slide='prev')
+                span.carousel-control-prev-icon(aria-hidden='true')       
+            a.carousel-control-next(href='#carouselIndicators' role='button' data-slide='next')
+                span.carousel-control-next-icon(aria-hidden='true')
+            .power__logo
+            h1.power__headline  NATURAL POWER
+            h4.power__signature VIVAMUS ORCI SEM, CONSECTETUR UT VESTIBULUM.
+                
+section.directions
+    .container
+        .row
+            .col-lg-3.col-md-6.col-sm-6.col-6
+                .directions__item
+                    .directions__item__develop
+                    h4.directions__item__headline Web development
+                    p.directions__item__description IT WAS HARD TO MAKE IT SO COOL
+            .col-lg-3.col-md-6.col-sm-6.col-6
+                .directions__item
+                    .directions__item__seo
+                    h4.directions__item__headline SEO Monitoring 
+                    p.directions__item__description IT WAS HARD TO MAKE IT SO COOL
+            .col-lg-3.col-md-6.col-sm-6.col-6
+                .directions__item
+                    .directions__item__communities
+                    h4.directions__item__headline Network Communities
+                    p.directions__item__description IT WAS HARD TO MAKE IT SO COOL
+            .col-lg-3.col-md-6.col-sm-6.col-6
+                .directions__item
+                    .directions__item__analytics
+                    h4.directions__item__headline Web analytics
+                    p.directions__item__description IT WAS HARD TO MAKE IT SO COOL
+
+section.recent
+    .container
+        .row
+            .col-lg-3.m-auto.col-md-4.col-sm-12
+                h2.recent__headline Recent Projects
+        .row
+            .col-lg-8.m-auto.col-md-12
+                p.recent__description Morbi a libero eget erat auctor cursus vitae id tortor. Suspendisse rhoncus. Vestibulum eu ligula lorem. 
+                p.recent__description Vivamus orci sem, consectetur ut vestibulum a, semper ac dui. 
+
+section.projects
+    .project__carousel.owl-carousel
+        +project__items('https://via.placeholder.com/388x202', 'Project Title', 'GRAPHIC DESIGN', '13', true)
+        +project__items('https://via.placeholder.com/388x202', 'Project Title', 'GRAPHIC DESIGN', '12', false)
+        +project__items('https://via.placeholder.com/388x202', 'Project Title', 'GRAPHIC DESIGN', '12', false)
+        +project__items('https://via.placeholder.com/388x202', 'Project Title', 'GRAPHIC DESIGN', '12', false)
+        +project__items('https://via.placeholder.com/388x202', 'Project Title', 'GRAPHIC DESIGN', '12', false)
+                    
+section.details
+    .container
+        .row
+            .col-lg-10.col-md-10.col-sm-12
+                p.details__info #[span.details__info-blue A fully responsive theme ] with clean design for your success!
+            .col-lg-2.col-md-2.col-sm-12
+                a(href='#').details__more CHECK DETAILS
+
+section.posts
+    .container
+        .row
+            .col-lg-6.col-md-12.col-sm-12.col-12
+                h3.posts__title Recent Posts
+                .posts__item.d-flex
+                    .posts__item-date.d-flex
+                        span.posts__item-date-number 15
+                        span.posts__item-date-month OCT, 2013
+                        img.posts__item-date-icon(src=src+'photo.png')
+                    img.posts__item-photo(src='https://via.placeholder.com/130x130')
+                    .posts__item-body
+                        .posts__body-link.d-flex
+                            a.body__link-item(href='#') BY ADMIN
+                            a.body__link-item(href='#') WEB, NEWS
+                            a.body__link-item(href='#') 5 COMMETNS
+                            a.body__link-item(href='#') READ MORE
+                        .posts__body-line
+                        h4.posts__body-title Vivamus orci sem, conse tur per ac dui oin vulputate.
+                        p.posts__body-description Proin vulputate aliquam mi nec hendrerit. Sed entum velit vel ipsum.
+                .posts__item.d-flex
+                    .posts__item-date.d-flex
+                        span.posts__item-date-number 25
+                        span.posts__item-date-month OCT, 2013
+                        img.posts__item-date-icon-v(src=src+'video.png')
+                    img.posts__item-photo(src='https://via.placeholder.com/130x130')
+                    .posts__item-body
+                        .posts__body-link.d-flex
+                            a.body__link-item(href='#') BY ADMIN
+                            a.body__link-item(href='#') WEB, NEWS
+                            a.body__link-item(href='#') 5 COMMETNS
+                            a.body__link-item(href='#') READ MORE
+                        .posts__body-line
+                        h4.posts__body-title Orci sem, conse tur per ac dui oin tate.
+                        p.posts__body-description Proin vulputate aliquam mi nec hendrerit. Sed entum velit vel ipsum. Ut sem lacus, ttitor et aliqua. eget, iaculis id lacus.
+            .col-lg-3.col-md-6.col-sm-6.col-12
+                 h3.posts__title Accordeon
+                 .accordeon
+                    .accordeon__item
+                        a.accordeon__btn.d-flex(data-toggle='collapse' href='#accordeon__content1') #[span +] #[h5.accordeon__title Vivamus orci sem sectetur.]   
+                        .collapse#accordeon__content1.accordeon__content
+                            p Sed entum velit vel ipsum bibendum em lacus, itor et aliquam eget, iaculis id lacus. Praesent tudin. 
+                            p Aiquam eget, iaculis id lacus. Praesent tudin. Ut sem lacus, ttitor putate uam mi nec hendrerit.
+                    .accordeon__item
+                        a.accordeon__btn.d-flex(data-toggle='collapse' href='#accordeon__content2') #[span +] #[h5.accordeon__title Sed entum velit vel ipsum.]  
+                        .collapse#accordeon__content2.accordeon__content
+                            p Sed entum velit vel ipsum bibendum em lacus, itor et aliquam eget, iaculis id lacus. Praesent tudin. 
+                            p Aiquam eget, iaculis id lacus. Praesent tudin. Ut sem lacus, ttitor putate uam mi nec hendrerit.
+                    .accordeon__item
+                        a.accordeon__btn.d-flex(data-toggle='collapse' href='#accordeon__content3') #[span +] #[h5.accordeon__title Porttitor et aliquam eget.] 
+                        .collapse#accordeon__content3.accordeon__content
+                            p Sed entum velit vel ipsum bibendum em lacus, itor et aliquam eget, iaculis id lacus. Praesent tudin. 
+                            p Aiquam eget, iaculis id lacus. Praesent tudin. Ut sem lacus, ttitor putate uam mi nec hendrerit.
+            .col-lg-3.col-md-6.col-sm-6.col-12
+                h3.posts__title What People Say
+                .comment
+                    .comment__profile.d-flex
+                        img.profile__photo(src='https://via.placeholder.com/81x81')
+                        .comment__person
+                            .person__name Sarah Doe
+                            .person__company CEO, COMPANY.COM
+                    .comment__body.d-flex
+                        img.comment__quote(src=src+'quote.png')
+                        .comment__text
+                            .comment__title Vivamus orci sem, consectetur ut vestibulum a, semper ac dui. 
+                            .comment__description Proin vulputate aliquam mi nec rerit. Sed entum velit vel ipsum bibendum tristique. Ut sem lacus, ttitor putate liquam mi nec hendrerit. 
+                                
+section.development
+    .container
+        .row
+            .col-lg-6.col-md-12
+                .development__photos
+                     img.development__photos-back(src='http://placehold.it/298x182' alt='picture-back' title='picture-back')
+                     img.development__photos-front(src='http://placehold.it/395x241' alt='picture-front' title='picture-front')
+                     img.development__photos-shadow-one(src=src+'shadow.png' alt='picture-shadow')
+                     img.development__photos-shadow-two(src=src+'shadow-two.png' alt='picture-shadow')
+                     img.development__photos-keyboard(src=src+'keyboard.png' alt='picture-keyboard' title='picture-keyboard')
+            .col-lg-6.col-md-12
+                .development__information
+                    +development__information-item('img/airplane.png','Flexible Solutions','Lorem ipsum dolor sit amet, #[span tetur piscing] elit. Suspendisse smod congue bibendum. Aliquam erat volutpat. Phasellus eget justo lacus.')
+                    +development__information-item('img/compass.png','Target Approach','Lorem ipsum dolor sit amet, #[span tetur piscing] elit. Suspendisse smod congue bibendum. Aliquam erat volutpat. Phasellus eget justo lacus.')
+                    +development__information-item('img/globe.png','Gllobal Development','Lorem ipsum dolor sit amet, #[span tetur piscing] elit. Suspendisse smod congue bibendum. Aliquam erat volutpat. Phasellus eget justo lacus.')
+                        
+section.team
+    .container
+        .row
+            .col-lg-3.m-auto  
+                h2.team__title Our Team
+        .row
+            +team__item
+            +team__item
+            +team__item
+            +team__item
+
+section.clients
+    .container-fluid
+        .row
+            +clients__item('img/netCredit.png')
+            +clients__item('img/paroo.png')
+            +clients__item('img/foxter.png')
+            +clients__item('img/counsel.png')
+            +clients__item('img/kamcord.png')
+
+section.contacts
+    .container
+        .row
+            .col-lg-3.m-auto.col-md-12.col-12
+                h2.contacts__title Get In Touch!
+        .row
+            .col-lg-6.m-auto.col-md-12.col-12
+                form.contacts__form(method="post")
+                    input.input__name.input(type="text" name="name" placeholder="Name*")
+                    input.input__mail.input(type="text" name="e-mail" placeholder="E-mail*")
+                    textarea.textarea__message.input(name="message" placeholder="Message")
+                    .form__buttons
+                        input.form__button-submit.form__button(type="submit" onclick="event.preventDefault()" value="SEND MESSAGE")
+                        input.form__button-clear.form__button(type="reset" value="CLEAR")
+
+section.twit
+    .container
+        .row
+            .col-lg-2.col-md-2.col-sm-2.col-2
+                .twit__icon
+                    img(src=src+'twit.png')
+
+            .col-lg-10.col-md-10.col-sm-10.col-10
+                .twit__carousel.owl-carousel
+                    +twit__carousel-item('@circles ','Because we know you don`t want to be in both portrait AND landscape! We care about limited format...','about 5 minutes ago')
+                    +twit__carousel-item('@circles ','Because we know you don`t want to be in both portrait AND landscape! We care about limited format...','about 10 minutes ago')
+                    +twit__carousel-item('@circles ','Because we know you don`t want to be in both portrait AND landscape! We care about limited format...','about 15 minutes ago')
+
+section.footer
+    .container
+        .row
+            .col-lg-3.col-md-6.col-sm-6
+                .d-flex
+                    img.footer__logo(src = src + 'logo.png' title='Логотип' alt='Логотип')
+                    h4.footer__headline MARINE
+                p.footer__description Vivamus orci sem, consectetur ut vestibulum a, mper ac dui. Aenean tellus nisl, commodo eu aliquet ut, pulvinar ut sapien. Proin tate aliquam mi nec hendrerit.
+            .col-lg-3.col-md-6.col-sm-6
+                h3.footer__title Recent Posts
+                .footer__posts-item
+                    .footer__posts-date DEC 15, 2012 | BY ADMIN 
+                    h6.footer__posts-headline Morbi a libero eget auctor.
+                    p.footer__posts-description Sus vitae id tortor suspendisse stibulum eu igula lorem ivamus orci sem, ectetur.
+                .footer__posts-item
+                    .footer__posts-date DEC 15, 2012 | BY ADMIN 
+                    h6.footer__posts-headline Morbi a libero eget auctor.
+                    p.footer__posts-description Sus vitae id tortor suspendisse stibulum eu igula lorem ivamus orci sem, ectetur.
+            .col-lg-3.col-md-6.col-sm-6
+                h3.footer__title Contacts
+                .contacts__item.d-flex
+                    .contacts__icon
+                        img(src=src+'location.png')
+                    .contacts__description
+                        p Phoenix Inc.
+                        p PO Box 21177
+                        p Little Lonxdale st, Melbourne
+                        p Victoria 8011 Australia
+                .contacts__item.d-flex
+                    .contacts__icon
+                        img(src=src+'phone.png')
+                    .contacts__description
+                        p Phone: (415) 124-5678
+                        p Fax: (415) 124-5678
+                .contacts__item.d-flex
+                    .contacts__icon
+                        img(src=src+'letter.png')
+                    .contacts__description
+                        p support@yourname.com
+            .col-lg-3.col-md-6.col-sm-6
+                h3.footer__title Newsletter Signup
+                .footer__letter By subscribing to our mailing list you will get the latest news from us.
+                form.footer__letter-submit.d-flex
+                    input.letter__text(type='text' name='letter')
+                    input.letter__submit(type='submit' onclick='event.preventDefault() ' value='')
+                h3.footer__social-title Follow Us
+                .footer__social.d-flex
+                    +social('fb', 'tw', 'sk', 'goo', 'vi', 'inn', 'inst')
+    .container-fluid.copyright
+        .row
+            .col-lg-4
+                .copyright__description © 2013 MARINE. All Rights Reserved
+
+                    
+                
+                        
+                        
+                        
+
+
+                            
+                            
+                            
+                            
+                            
+                            

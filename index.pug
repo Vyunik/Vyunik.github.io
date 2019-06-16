@@ -1,7 +1,4 @@
-extends ../main.pug
 doctype html
-
-block variables
 
 html(lang="ru-RU")
     head
@@ -12,22 +9,9 @@ html(lang="ru-RU")
         link(href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet")
         link(href="css/owl.carousel.css" rel="stylesheet")
         link(href="css/main.css" rel="stylesheet")
-        title #{title}
+        title Marine
     body
-        block head
-        block navigation
-        block power
-        block directions
-        block recent
-        block projects
-        block details
-        block posts
-        block development
-        block team
-        block clients
-        block contacts
-        block twit
-        block footer
+       include pug/main.pug
         script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
         script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js", integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM", crossorigin="anonymous")
         script(src="js/owl.carousel.js")
