@@ -1,0 +1,60 @@
+mixin social(...items)
+        each item in items
+            a(class="header__social-item header__social--" +item href="#")
+
+mixin nav(link,title,active)
+    if(active)
+        li.navigation__menu-item
+            a(href=link).navigation__menu-item-link.navigation__active-link=title
+    else 
+        li.navigation__menu-item
+            a(href=link).navigation__menu-item-link=title
+
+mixin project__items(src, headline, description, count, active)
+     .projects__item
+        .projects__hover
+            a(href='#').projects__hover-link
+            a(href='#').projects__hover-magnifier
+        img.project__img(src=src title='project image' alt='project image')
+        .project__about.d-flex
+            .project__description
+                .project__description-title= headline
+                .project__description-text= description
+            .projects__likes
+                if(active)
+                    input.likes__img.likes__active(type='button', value='')
+                else
+                    input.likes__img(type='button', value='')
+            span.likes__count= count
+            
+mixin development__information-item(src, title, description)
+    .development__information-item.d-flex
+        .information__item-icon
+            img(src=src)
+        .information__item-description
+            .description__title=title
+            .description__text=description
+            
+mixin team__item
+    .col-lg-3.col-md-6.col-sm-6.col-12
+        .team__photo
+            img(src='https://via.placeholder.com/190x181')
+        .team__information
+            .team__name Sarah Doe
+            .team__position CEO
+            p.team__description Proin vulputate aliquam mi nec rerit. Sed entum velit vel ipsum bibendum tristique.
+            .team__description-border
+            .team__social.d-flex
+                +social('fb', 'tw', 'sk', 'goo', 'vi', 'inn', 'inst')
+                
+mixin clients__item(src)
+        a.clients__item
+            img(src=src)
+            
+mixin twit__carousel-item(login,description,time)
+    .twit__carousel-item
+        .twit__information.d-flex
+            span.twit__login=login
+            p.twit__description.m-0=description
+        span.twit__time=time
+

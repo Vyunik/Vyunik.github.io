@@ -1,0 +1,13 @@
+@mixin directions($name) {
+    width: 75px;
+    height: 75px;
+    background: url($url+$name) no-repeat center;
+    margin: 0 auto;
+    margin-bottom: 19px;
+}
+
+@mixin input($name) {
+    background-image: url($url+$name);
+    background-repeat: no-repeat;
+    background-position: 97% 50%;
+}
