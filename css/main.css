@@ -927,11 +927,13 @@ body {
     margin-left: 10%; } }
 
 @media screen and (max-width: 991px) {
-  .power {
-    height: 400px; }
   .power__headline {
     font-size: 67px;
     right: 13%; }
+  .header__social-item {
+    margin-right: 5px; }
+  .carousel-item {
+    height: 100%; }
   .carousel-control-next,
   .carousel-control-prev {
     bottom: 70px; }
@@ -939,12 +941,12 @@ body {
     right: 28%;
     font-size: 12px; }
   .directions {
-    height: 370px; }
+    height: 100%; }
   .project__about {
     height: 84px;
     padding-top: 17px; }
   .project__description {
-    margin-right: 55%; }
+    margin-right: 30%; }
   .project__about::after {
     bottom: 83px; }
   .details {
@@ -1027,15 +1029,21 @@ body {
   .footer__letter {
     font-size: 14px; } }
 
+@media screen and (max-width: 991px) {
+  .project__description {
+    margin-right: 60%; } }
+
+@media screen and (max-width: 879px) {
+  .power__signature {
+    bottom: 70px; } }
+
 @media screen and (max-width: 767px) {
   .logo {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; }
-  .power {
-    height: 299px; }
   .carousel-control-next, .carousel-control-prev {
-    bottom: 200px; }
+    bottom: 0px; }
   .power__logo {
     background-size: 65%;
     right: 43%;
@@ -1047,11 +1055,11 @@ body {
   .power__signature {
     right: 24%;
     font-size: 11px;
-    bottom: 255px; }
+    bottom: 75px; }
   .recent__headline {
     text-align: center; }
   .project__description {
-    margin-right: 65%; }
+    margin-right: 40%; }
   .details {
     padding-bottom: 9px;
     padding-top: 3px; }
@@ -1114,27 +1122,25 @@ body {
     padding: 7px 19px; }
   .navigation__search-block {
     margin-left: -245px; }
-  .power {
-    height: 175px; }
   .power__logo {
-    background-size: 33%;
-    right: 38%;
-    top: 0; }
+    background-size: 56%;
+    right: 42%;
+    top: 25px; }
   .power__headline {
-    font-size: 21px;
-    right: 24%;
-    top: 75px; }
+    font-size: 45px;
+    right: 15%;
+    top: 115px; }
   .power__signature {
-    right: 25%;
-    font-size: 6px;
-    bottom: 340px; }
+    right: 27%;
+    font-size: 9px;
+    bottom: 67px; }
   .carousel-control-next-icon,
   .carousel-control-prev-icon {
     width: 40px;
     height: 40px; }
   .carousel-control-next,
   .carousel-control-prev {
-    bottom: 305px; }
+    bottom: 0px; }
   .directions {
     height: 340px; }
   .directions__item__headline {
@@ -1226,3 +1232,17 @@ body {
     margin-left: 20%; }
   .footer__social {
     margin-bottom: 20px; } }
+
+@media screen and (max-width: 575px) {
+  .power__logo {
+    background-size: 34%;
+    right: 39%;
+    top: -8px; }
+  .power__headline {
+    font-size: 28px;
+    right: 16%;
+    top: 65px; }
+  .power__signature {
+    right: 23%;
+    font-size: 7px;
+    bottom: 40px; } }
